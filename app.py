@@ -52,7 +52,7 @@ def predict():
             return jsonify(res)
 
 def process_predict(img_path):
-    img_load = image.load_img(img_path, target_size=(250, 250))
+    img_load = image.load_img(img_path, target_size=(150, 150))
     arr_img = image.img_to_array(img_load)
     arr_img = expand_dims(arr_img, axis = 0)
     x =  preprocess_input(arr_img)  
